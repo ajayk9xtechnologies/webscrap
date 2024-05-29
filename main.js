@@ -34,7 +34,7 @@
                 }
             } catch (error) {
                 console.error('Error fetching the webpage:', error);
-                scraptext.innerHTML = 'Error fetching the webpage. Check console for details.';
+                scraptext.innerHTML = 'To ensure CORS (Cross-Origin Resource Sharing) is enabled for accessing content from different domains, you can use a browser extension. Search for "CORS" in the Chrome Web Store, add a reputable extension like "Allow CORS: Access-Control-Allow-Origin" to Chrome, and enable it. ';
             }
         }
     
