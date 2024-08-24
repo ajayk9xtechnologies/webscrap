@@ -7,6 +7,8 @@
 </head>
 <body>
     <h1>Lyrics Formatter</h1>
+    <div>
+        <div>
     <!-- Input for pasting content -->
     <label for="inputTextarea">Paste Content:</label>
     <textarea id="inputTextarea" rows="20" cols="100" placeholder="Paste the lyrics here"></textarea>
@@ -14,12 +16,13 @@
 
     <!-- Button to process the content -->
     <button onclick="formatLyrics()">Format Lyrics</button>
-    <br><br>
-
-    <!-- Textarea for output -->
-    <label for="outputTextarea">Formatted Output:</label>
-    <textarea id="outputTextarea" rows="20" cols="100" readonly></textarea>
-
+        </div>
+        <div>
+            <label for="outputTextarea">Formatted Output:</label>
+            <textarea id="outputTextarea" rows="20" cols="100" readonly></textarea>        
+        </div>
+    </div>
+   
     <script>
         // Function to format the pasted lyrics
         function formatLyrics() {
@@ -28,6 +31,8 @@
             // Handle special cases of '॥ Doha ॥' and '॥ Chaupai ॥'
             content = content.replace(/॥\s*Doha\s*॥/g, "॥ Doha ॥<br><br>");
             content = content.replace(/॥\s*Chaupai\s*॥/g, "॥ Chaupai ॥<br><br>");
+            content = content.replace(/॥\s*दोहा \s*॥/g, "॥ दोहा ॥<br><br>");
+            content = content.replace(/॥\s*चौपाई \s*॥/g, "॥ चौपाई ॥<br><br>");
 
             // Add <br> after '॥' and '।' only at the end of the sentence
             content = content.replace(/(॥)\s*$/gm, "॥<br>");
