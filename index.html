@@ -29,10 +29,10 @@
             let content = document.getElementById('inputTextarea').value;
 
             // Handle special cases of '॥ Doha ॥' and '॥ Chaupai ॥'
-            content = content.replace(/॥\s*Doha\s*॥/g, "॥ Doha ॥<br><br>");
-            content = content.replace(/॥\s*Chaupai\s*॥/g, "॥ Chaupai ॥<br><br>");
+            content = content.replace(/॥\s*Doha\s*॥/g, "॥ Doha ॥<br>");
+            content = content.replace(/॥\s*Chaupai\s*॥/g, "<br><br>॥ Chaupai ॥<br>");
             content = content.replace(/॥\s*दोहा \s*॥/g, "॥ दोहा ॥<br><br>");
-            content = content.replace(/॥\s*चौपाई \s*॥/g, "॥ चौपाई ॥<br><br>");
+            content = content.replace(/॥\s*चौपाई \s*॥/g, "<br><br>॥ चौपाई ॥<br>");
 
             // Add <br> after '॥' and '।' only at the end of the sentence
             content = content.replace(/(॥)\s*$/gm, "॥<br>");
